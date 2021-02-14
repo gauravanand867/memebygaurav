@@ -2,7 +2,7 @@ module.exports = {
   MONGODB_URL:
     process.env.MONGODB_URL ||
     "mongodb+srv://gaurav:dbcrio@meme.edzyg.mongodb.net/memes?retryWrites=true&w=majority",
-  PORT: process.env.PORT || 8080,
+  PORT: process.env.PORT || 8081,
 };
 
 //For local database

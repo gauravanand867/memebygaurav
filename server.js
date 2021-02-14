@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const config = require("./config");
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 //Importing Router
-const memeRoute = require("./routers/memeRoute");
+const memeRoute = require("./src/routers/memeRoute");
 
 dotenv.config();
 const app = express();
@@ -25,6 +26,7 @@ mongoose
   .catch((error) => console.log(error.reason));
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(memeRoute);
 
 app.get("/", (req, res) => {
